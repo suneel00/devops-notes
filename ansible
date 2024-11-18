@@ -1,0 +1,211 @@
+ansible installation & install packages & Deploye packages on remote server using ansible host server
+
+1  sudo yum install epel-release -y
+    2  top
+    3  hostnamectl set-hostname ansible-host-server
+    4  hostname
+    5  exit
+    6  sudo sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+    7  sudo sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+    8  udo yum install epel-release -y
+    9  sudo yum install epel-release -y
+   10  yum install python3 -y
+   11  vi ~/.bashrc
+   12  source ~/.bashrc
+   13  cd /etc/ansible
+   14  vim maven.yml
+   15  ansible-playbook maven.yml
+   16  maven -version
+   17  maven --version
+   18  mvn -version
+   19  top
+   20  vim httpd.yml
+   21  ansible-playbook httpd.yml
+   22  httpd -version
+   23  vim jenkins.yml
+   24  ansible-playbook jenkins.yml
+   25  vim jenkins.yml
+   26  ansible-playbook jenkins.yml
+   27  top
+   28  >jenkins.yml
+   29  vim jenkins.yml
+   30  vim jenkins.yml
+   31  vim jenkins.yml
+ 32  ansible-playbook jenkins.yml
+   33  java -version
+   34  >jenkins.yml
+   35  vim jenkins.yml
+   36  ansible-playbook jenkins.yml
+   37  vim jenkins.yml
+   38  ansible-playbook jenkins.yml
+   39  java -veraion
+   40  java -version
+   41  yum install java-11-openjdk -y
+   42  sudo yum install java-11-openjdk -y
+   43  java -version
+   44  rm -rf java.yml
+   45  java -version
+   46  rm -rf java
+   47  java -version
+   48  vim java.yml
+   49  ansible-playbook java.yml
+   50  java -version
+   51  top
+   52  ls
+   53  pwd
+   54  top
+   55  mkdir inventory
+   56  ls
+   57  cd inventory/
+   58  touch hosts.ini
+   59  vim hosts.ini
+   60  ls
+ 61  touch himasree.pem
+   62  vi himasree.pem
+   63  chmod 600 himasree.pem
+   64  ls
+   65  cd ..
+   66  ls
+   67  cd /etc/ansible
+   68  ls
+   69  cp java.yml /home/centos
+   70  cd /home/centos
+   71  ls
+   72  pwd
+   73  rm -rf inventory
+   74  ls
+   75  cd /etc/ansible
+   76  rm -rf inventory
+   77  ls
+   78  c ..
+   79  cd ..
+   80  cd /home/centos
+   81  mkdir inventory
+   82  ls
+   83  cd inventory/
+   84  touch hosts.ini
+   85  vim hosts.ini
+   86  ls
+   87  touch himasree.pem
+   88  vi himasree.pem
+   89  vi himasree.pem
+   90  ls
+   91  chmod 600 himasree.pem
+   92  ls
+   93  cd ..
+   94  ls
+   95  vim java.yml
+   96  cd inventory/
+97  ls
+   98  cd ..
+   99  ansible-playbook java.yml -i /home/centos/inventory/hosts.ini
+  100  vim hosts.ini
+  101  cat hosts.ini
+  102  vim hosts.ini
+  103  ls
+  104  rm -rf hosts.ini
+  105  ls
+  106  cd inventory/
+  107  ls
+  108  cat hosts.ini
+  109  top
+  110  ls
+  111  vim hosts.ini
+  112  cd ..
+  113  ansible-playbook java.yml -i /home/centos/inventory/hosts.ini
+  114  top
+  115  ansible-playbook java.yml -i /home/centos/inventory/hosts.ini
+  116  vim hosts.ini
+  117  cd inventory/
+  118  ls
+  119  vim hosts.ini
+  120  cd ..
+  121  ansible-playbook java.yml -i /home/centos/inventory/hosts.ini
+  122  top
+  123  yum install ansible -y
+  124  ansible --version
+  125  yum install ansible -y
+  126  ansible --version
+  127  top
+  128  cd /etc/ansible
+ 129  ls
+  130  yum install vim -y
+  131  vim hosts
+  132  history
+  133  top
+  134  vim java.yml
+  135  ansble-playbook java.yml
+  136  ansible-playbook java.yml
+  137  vim java.yml
+  138  vim java.yml
+  139  ansible-playbook java.yml
+  140  java -version
+  141  touch maven.yml
+  142  ls
+  143  cd inventory/
+  144  cat hosts.ini
+  145  vim hosts.ini
+  146  ansible-playbook java.yml -i /home/centos/inventory/hosts.ini
+  147  cd ..
+  148  ansible-playbook java.yml -i /home/centos/inventory/hosts.ini
+  149  ls
+  150  top
+  151  java -version
+  152  top
+  153  ls
+  154  cd inventory/
+  155  vim hosts.ini
+  156  cd..
+  157  cd ..
+  158  ansible-playbook java.yml -i /home/centos/inventory/hosts.ini
+
+
+Ansible roles & install elk package (java, nginx ,elasticsearch, logstash, kibana, file beat) & install nginx manually
+--------------------------------------------------------------------------------------------------------------------------
+
+yum install unzip -y
+  168  unzip ELK-centos\ \(1\).zip
+  169  ls
+  170  cd ELK
+  171  ls
+  172  cd role/
+  173  ls
+  174  ansible-playbook elk.yml
+  175  cd /home/centos/
+  176  ls
+  177  vim nginx.yml
+  178  ansible-playbook nginx.yml
+  179  sudo nginx -v
+  180  cat nginx.yml
+  181  vim nginx.yml
+  182  ansible-playbook nginx.yml
+  183  > nginx.yml
+  184*
+  185  ansible-playbook nginx.yml
+  186  top
+  187  vim nginx.yml
+  188  ansible-playbook nginx.yml
+  189  top
+  190  vim nginx.yml
+  191  ansible-playbook nginx.yml
+  192  nginx -version
+  193  vim nginx.yml
+  194  ansible-playbook nginx.yml --connection=local --become
+  195  > nginx.yml
+  196  vim nginx.yml
+  197  vim nginx.yml
+  198  ansible-playbook nginx.yml --connection=local --become
+  199  systemctl status nginx.service
+  200  sudo nginx -t
+  201  sudo cat /var/log/nginx/error.log
+  202  sudo systemctl stop httpd
+  203  sudo systemctl disable httpd
+  204  sudo /usr/sbin/nginx -c /nginx/nginx.conf -g 'daemon off;'
+  205  sudo setenforce 0
+  206  sudo systemctl restart nginx
+  207   sudo systemctl status nginx
+  208  ls
+  209  cd ELK
+  210  cd role
+  211  ls
+  212  ansible-playbook elk.yml
