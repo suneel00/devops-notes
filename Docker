@@ -18,7 +18,7 @@ create docker and pull the images from docker hub and push the images to the doc
    15  docker run -it centos
    16  docker ps -a
    17  docker ps
- 18  docker ps -a
+   18  docker ps -a
    19  docker ps -l
    20  docker pull ubantu
    21  docker pull ubuntu
