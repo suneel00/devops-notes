@@ -1,7 +1,7 @@
 create docker and pull the images from docker hub and push the images to the docker hub , then create and delete and remove the images.
 
 
-1  sudo sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+    1  sudo sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
     2  sudo sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
     3  sudo yum install -y yum-utils
     4  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
