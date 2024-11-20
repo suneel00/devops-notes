@@ -209,3 +209,9 @@ yum install unzip -y
   210  cd role
   211  ls
   212  ansible-playbook elk.yml
+-------------------------------------------------------------------------------
+master server -- if u want to find the list of servers 
+$ ansible all --list-hosts
+$ ansible dev --list-hosts
+$ansible test --list-hosts
+
