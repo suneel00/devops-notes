@@ -7,7 +7,6 @@ ansible installation & install packages & Deploye packages on remote server usin
     5  exit
     6  sudo sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
     7  sudo sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-    8  udo yum install epel-release -y
     9  sudo yum install epel-release -y
    10  yum install python3 -y
    11  vi ~/.bashrc
@@ -15,8 +14,6 @@ ansible installation & install packages & Deploye packages on remote server usin
    13  cd /etc/ansible
    14  vim maven.yml
    15  ansible-playbook maven.yml
-   16  maven -version
-   17  maven --version
    18  mvn -version
    19  top
    20  vim httpd.yml
@@ -39,7 +36,6 @@ ansible installation & install packages & Deploye packages on remote server usin
    37  vim jenkins.yml
    38  ansible-playbook jenkins.yml
    39  java -veraion
-   40  java -version
    41  yum install java-11-openjdk -y
    42  sudo yum install java-11-openjdk -y
    43  java -version
@@ -50,10 +46,8 @@ ansible installation & install packages & Deploye packages on remote server usin
    48  vim java.yml
    49  ansible-playbook java.yml
    50  java -version
-   51  top
    52  ls
    53  pwd
-   54  top
    55  mkdir inventory
    56  ls
    57  cd inventory/
