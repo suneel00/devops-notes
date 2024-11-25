@@ -40,11 +40,9 @@ create docker and pull the images from docker hub and push the images to the doc
    37  docker ps -a
    38  docker pull jenkins/jenkins
    39  docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins
-   40  docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins
    41  docker login
    42  docker images
    43  docker tag jenkins/jenkins himasree04/jenkins/jenkins
    44  docker push himasree04/jenkins/jenkins
    45  docker tag ubuntu himasree04/ubuntu
-   46  docke push himasree04/ubuntu
    47  docker push himasree04/ubuntu
