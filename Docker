@@ -46,3 +46,30 @@ create docker and pull the images from docker hub and push the images to the doc
    44  docker push himasree04/jenkins/jenkins
    45  docker tag ubuntu himasree04/ubuntu
    47  docker push himasree04/ubuntu
+
+
+
+own words
+----------
+
+docker run -itd --name imageid  : interactive terminal detach -- which is used to create the shell inside the container thta helps to run the script.
+
+
+docker run -itd --name containername imageid
+
+container inside vellali ante
+docker exec -it containername bash
+
+stop the container
+docker stop containername 
+
+how to stop all containers
+docker stop $(docker ps)
+
+
+to remove the container(only the container is in stoped or forcefull remove)
+docker rm containername (or) docker rm -f containername
+
+
+images
+remove image ---- docker rmi imagename 
