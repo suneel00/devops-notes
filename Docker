@@ -74,5 +74,6 @@ docker rm containername (or) docker rm -f containername
 images
 remove image ---- docker rmi imagename 
 
-delete all the exited containers (it confirms before deleted the containers)
+delete all the exited containers and none state images (it confirms before deleted the containers or images)
 ---docker container prune
+---docker image prune
